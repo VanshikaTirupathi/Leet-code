@@ -17,3 +17,15 @@ class Solution:
             i=i+1
         return temp
         
+---------------------------------------------------------------------------
+
+Another Logic
+class solution:
+    def middleNode(self,head:Optional[ListNode])->Optional[ListNode]:
+        fast=head
+        slow=head
+        while fast!=None and fast.next!=None:
+            fast=fast.next.next
+            slow=low.next
+        return slow
+    
