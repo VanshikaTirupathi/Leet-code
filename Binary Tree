@@ -3,6 +3,17 @@ class TreeNode:
         self.val=a
         self.left=None
         self.right=None
+def maxBST(root):
+    temp=root
+    while temp.right!=None:
+        temp=temp.right
+    return temp.val
+def minBST(root):
+    temp=root
+    while temp.left!=None:
+        temp=temp.left
+    return temp.val
+
 def countNodes(root):
     if root==None:
         return 0
@@ -56,3 +67,5 @@ print(sumNodes(root))
 print(MultiplyNodes(root))
 print(countEvenNodes(root))
 print(SearchNodes(root,15))
+print(maxBST(root))
+print(minBST(root))
