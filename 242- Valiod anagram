@@ -1,0 +1,18 @@
+def isAnagram(self, s: str, t: str) -> bool:
+    freq = {}
+    for i in s:  # adding char of s in dictionary
+        if i in freq:
+            freq[i] += 1
+        else:
+            freq[i] = 1
+    for i in t:  # removing if found in t
+        if i not in freq:
+            return False
+        else:
+            freq[i] -= 1
+            if freq[i] < 0:   # extra occurrence in t
+                return False
+    for i in freq:
+        if freq[i] != 0:
+            return False
+    return True
